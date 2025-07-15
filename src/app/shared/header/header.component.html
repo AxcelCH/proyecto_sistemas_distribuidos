@@ -1,22 +1,45 @@
 <header class="header">
   <div class="header-content">
-    <div class="logo">
-      <h2>Sistema Académico</h2>
+    <!-- Logo y título -->
+    <div class="logo-section">
+      <i class="pi pi-graduation-cap logo-icon"></i>
+      <div class="logo-text">
+        <h1 class="main-title">Centro de Idiomas</h1>
+        <span class="subtitle">Postgrado UNMSM</span>
+      </div>
     </div>
     
     <!-- Menú para usuarios NO autenticados -->
     <nav class="nav-menu" *ngIf="!isAuthenticated">
-      <button (click)="navigateTo('login')" class="nav-button">Ingresar</button>
-      <button (click)="navigateTo('registro')" class="nav-button">Registrarse</button>
+      <button 
+        type="button"
+        (click)="navigateTo('login')" 
+        class="nav-button login-btn">
+        <i class="pi pi-sign-in"></i>
+        <span>Ingresar</span>
+      </button>
+
     </nav>
 
     <!-- Menú para usuarios AUTENTICADOS -->
     <div class="user-menu" *ngIf="isAuthenticated">
       <div class="user-info">
-        <span class="welcome-text">Bienvenido, </span>
-        <span class="user-name">{{currentUser?.nombre}} {{currentUser?.apellido}}</span>
+        <div class="user-avatar">
+          <i class="pi pi-user"></i>
+        </div>
+        <div class="user-details">
+          <span class="user-name">{{currentUser?.nombre}} {{currentUser?.apellido}}</span>
+          <span class="user-email">{{currentUser?.email}}</span>
+        </div>
       </div>
-      <button (click)="logout()" class="logout-button">Cerrar Sesión</button>
+      
+      <button 
+        type="button"
+        (click)="logout()" 
+        class="logout-button">
+        <i class="pi pi-sign-out"></i>
+        <span>Cerrar Sesión</span>
+      </button>
     </div>
   </div>
 </header>

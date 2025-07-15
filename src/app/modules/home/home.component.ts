@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeaderComponent } from '../../shared/header/header.component';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +10,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class HomeComponent {
 
+  constructor(private router: Router) {}
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
+  scrollToFeatures() {
+    const featuresSection = document.querySelector('.features-section');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

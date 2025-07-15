@@ -1,5 +1,203 @@
 <app-header></app-header>
-<div class="home-content">
-    <h1>Bienvenido al Sistema Académico</h1>
-    <p>Por favor, selecciona una opción en el menú superior.</p>
-</div>
+
+<main class="home-main">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <i class="pi pi-graduation-cap hero-icon"></i>
+          Bienvenido al Centro de Idiomas
+        </h1>
+        <p class="hero-subtitle">Postgrado UNMSM</p>
+        <p class="hero-description">
+          Desarrolla tus habilidades lingüísticas con nuestros programas especializados 
+          diseñados para estudiantes de postgrado y profesionales.
+        </p>
+        
+        <div class="hero-actions">
+          <button 
+            type="button"
+            (click)="navigateTo('login')" 
+            class="cta-button primary">
+            <i class="pi pi-sign-in"></i>
+            <span>Comenzar Ahora</span>
+          </button>
+          
+
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="image-placeholder">
+          <i class="pi pi-book image-icon"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegir nuestro Centro de Idiomas?</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="pi pi-users"></i>
+          </div>
+          <h3 class="feature-title">Profesores Especializados</h3>
+          <p class="feature-description">
+            Docentes altamente calificados con experiencia en enseñanza de idiomas a nivel universitario.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="pi pi-desktop"></i>
+          </div>
+          <h3 class="feature-title">Metodología Moderna</h3>
+          <p class="feature-description">
+            Utilizamos las últimas tecnologías y metodologías para un aprendizaje efectivo y dinámico.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="pi pi-calendar"></i>
+          </div>
+          <h3 class="feature-title">Horarios Flexibles</h3>
+          <p class="feature-description">
+            Adaptamos nuestros horarios a las necesidades de estudiantes y profesionales ocupados.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="pi pi-verified"></i>
+          </div>
+          <h3 class="feature-title">Certificación Oficial</h3>
+          <p class="feature-description">
+            Obtén certificados reconocidos que validen tu nivel de competencia en el idioma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section class="languages-section">
+    <div class="container">
+      <h2 class="section-title">Idiomas Disponibles</h2>
+      
+      <div class="languages-grid">
+        <div class="language-card">
+          <div class="language-flag">🇺🇸</div>
+          <h3 class="language-name">Inglés</h3>
+          <p class="language-levels">Básico • Intermedio • Avanzado</p>
+        </div>
+
+        <div class="language-card">
+          <div class="language-flag">🇫🇷</div>
+          <h3 class="language-name">Francés</h3>
+          <p class="language-levels">Básico • Intermedio • Avanzado</p>
+        </div>
+
+        <div class="language-card">
+          <div class="language-flag">🇩🇪</div>
+          <h3 class="language-name">Alemán</h3>
+          <p class="language-levels">Básico • Intermedio</p>
+        </div>
+
+        <div class="language-card">
+          <div class="language-flag">🇮🇹</div>
+          <h3 class="language-name">Italiano</h3>
+          <p class="language-levels">Básico • Intermedio</p>
+        </div>
+
+        <div class="language-card">
+          <div class="language-flag">🇵🇹</div>
+          <h3 class="language-name">Portugués</h3>
+          <p class="language-levels">Básico • Intermedio</p>
+        </div>
+
+        <div class="language-card">
+          <div class="language-flag">🇨🇳</div>
+          <h3 class="language-name">Mandarín</h3>
+          <p class="language-levels">Básico</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">¿Listo para comenzar tu aprendizaje?</h2>
+        <p class="cta-description">
+          Únete a nuestra comunidad de estudiantes y desarrolla tus habilidades lingüísticas 
+          con los mejores profesores y metodologías.
+        </p>
+        
+        <div class="cta-actions">
+          <button 
+            type="button"
+            (click)="navigateTo('registro')" 
+            class="cta-button primary large">
+            <i class="pi pi-user-plus"></i>
+            <span>Registrarse Ahora</span>
+          </button>
+          
+          <button 
+            type="button"
+            (click)="scrollToFeatures()" 
+            class="cta-button outline large">
+            <i class="pi pi-info-circle"></i>
+            <span>Más Información</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="pi pi-graduation-cap"></i>
+          <span>Centro de Idiomas UNMSM</span>
+        </div>
+        <p class="footer-description">
+          Formando profesionales competentes en idiomas desde 1990.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contacto</h4>
+        <div class="contact-info">
+          <p><i class="pi pi-phone"></i> +51 1 619-7000</p>
+          <p><i class="pi pi-envelope"></i> idiomas&#64;unmsm.edu.pe</p>
+          <p><i class="pi pi-map-marker"></i> Ciudad Universitaria, Lima</p>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a (click)="navigateTo('login')">Ingresar</a></li>
+          <li><a (click)="navigateTo('registro')">Registrarse</a></li>
+          <li><a href="#" (click)="$event.preventDefault()">Sobre Nosotros</a></li>
+          <li><a href="#" (click)="$event.preventDefault()">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Centro de Idiomas - Postgrado UNMSM. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
